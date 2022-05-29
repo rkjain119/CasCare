@@ -253,3 +253,10 @@ details {
 summary {
 	display: list-item;
 }
+
+iframe {
+	border-width: 0 !important;
+	border-style: none !important;
+	border-color: transparent !important;
+	border-image: none !important;
+}

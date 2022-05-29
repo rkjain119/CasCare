@@ -12,7 +12,7 @@
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- <link rel="stylesheet" href="dist\css\cascare.min.css" /> -->
 		<link rel="stylesheet" href="doc/css/cascare.css" />
-		<script defer="" src="/doc/documentation.js"></script>
+		<script defer src="/doc/documentation.js"></script>
 		<title>CasCare UI</title>
 	</head>
 
@@ -87,7 +87,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="scss\cascare.css" class="nav-link download">
+					<a href="#to-download" class="nav-link download">
 						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cloud-download"
 							role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
 							class="svg-inline--fa fa-cloud-download fa-w-20 fa-3x">
@@ -125,7 +125,7 @@
 
 				<li class="nav-item">
 					<div class="nav-link social-link">
-						<a href="https://github.com/rkjain119">
+						<a href="https://github.com/rkjain119/CasCare">
 							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img"
 								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
 								class="svg-inline--fa fa-github fa-w-16 fa-3x">
@@ -161,16 +161,21 @@
 		<main>
 			<header class="hero">
 				<h1 class="hero-title">CasCare</h1>
-				<h3>Build and ship 🔥 your app ⚡ faster🚀</h3>
-				<p>
+				<p>Build 🔨 and ship 🚀 your app ⚡ faster🔥.</p>
+				<h4>
 					CSS framework and component library for programmers and rapid
 					prototypers
-				</p>
+				</h4>
+				<br>
 				<div class="hero-buttons">
-					<button class="button">Explore</button>
-					<button class="button button-outline">Download</button>
+					<button onclick="window.location.href='#docs'" class="button">Explore</button>
+					<button
+						onclick="window.open('https://github.com/rkjain119/CasCare/releases/download/v0.0.1-alpha/cascare.min.css')"
+						class="button button-outline">Download</button>
 					<hr />
-					<button class="button button-clear">show me the code</button>
+					<button onclick="window.open('https://github.com/rkjain119/CasCare')" type="button"
+						class="button button-clear">show me the
+						code</button>
 				</div>
 			</header>
 			<div id="docs" class="docs">
@@ -235,26 +240,28 @@
 						<p>
 							Include <code>drift.css</code> in your website or Web app.
 						</p>
-						<iframe src="https://carbon.now.sh/embed/s35sMW1Lv0YcmUnmGqp3"
-							style="width: 452px; height: 119px; border:0; transform: scale(1); overflow:hidden;"
-							sandbox="allow-scripts allow-same-origin">
+						<iframe loading="lazy" src="https://carbon.now.sh/embed/s35sMW1Lv0YcmUnmGqp3">
 						</iframe>
 						<p>Download the compiled and minified <code> CasCare.min.css </code>file
 						</p>
-						<button id="download" class="button">Download</button>
+						<div id="to-download"></div>
+						<button id="download"
+							onclick="window.open('https://github.com/rkjain119/CasCare/releases/download/v0.0.1-alpha/cascare.min.css')"
+							class="button">Download</button>
 
 						<h3 class="component-title ">Install via CDN</h3>
+
 						<details class="code-dropdown">
 							<summary>Use the following CDN link to include driftcss in your project.
 							</summary>
-							<iframe src="https://carbon.now.sh/embed/s35sMW1Lv0YcmUnmGqp3"
-								style="width: 452px; height: 119px; border:0; transform: scale(1); overflow:hidden;"
-								sandbox="allow-scripts allow-same-origin">
-							</iframe>
+							<div class="iframe-container">
+
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/kGdl5784pbnNKvev2FwV"
+									loading="lazy">
+								</iframe>
+
+							</div>
 						</details>
-
-
-
 					</section>
 					<section id="alert" class="component">
 						<h3 class="component-title">Alert</h3>
@@ -278,8 +285,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/d5C31jXaS6on8PUAnAnS"
-									sandbox="allow-scripts allow-same-origin">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/d5C31jXaS6on8PUAnAnS">
 								</iframe>
 							</div>
 						</details>
@@ -331,8 +337,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/uebcH0gJ1icPjpfKAQJK"
-									sandbox="allow-scripts allow-same-origin">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/uebcH0gJ1icPjpfKAQJK">
 								</iframe>
 							</div>
 						</details>
@@ -390,8 +395,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2"
-									sandbox="allow-scripts allow-same-origin">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2">
 								</iframe>
 							</div>
 						</details>
@@ -437,8 +441,7 @@
 							<summary>Show sample code</summary>
 
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/BQAXWFPzi78HzFGJnNux"
-									sandbox="allow-scripts allow-same-origin">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/BQAXWFPzi78HzFGJnNux">
 								</iframe>
 							</div>
 						</details>
@@ -469,8 +472,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/xUKugrjmblJOjqmjG38C"
-									sandbox="allow-scripts allow-same-origin"></iframe>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/xUKugrjmblJOjqmjG38C"></iframe>
 							</div>
 						</details>
 					</section>
@@ -519,8 +521,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2"
-									sandbox="allow-scripts allow-same-origin"></iframe>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2"></iframe>
 							</div>
 						</details>
 					</section>
@@ -548,8 +549,7 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U"
-									sandbox="allow-scripts allow-same-origin"></iframe>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U">
 								</iframe>
 							</div>
 						</details>
@@ -582,12 +582,10 @@
 							</div>
 						</div>
 
-
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe src="https://carbon.now.sh/embed/s5gRMDdB20hFWqmtUzIl"
-									sandbox="allow-scripts allow-same-origin"></iframe>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/s5gRMDdB20hFWqmtUzIl"></iframe>
 								</iframe>
 							</div>
 						</details>
@@ -640,21 +638,16 @@
 							</div>
 						</div>
 						<p class="component-description">
-
 							You can add the <code>.popover-right</code>, <code>.popover-bottom</code> or
 							<code>.popover-left</code> class to define the
 							position. By default, the
 							popovers appear above the element.
 						</p>
-
-
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U"
-									sandbox="allow-scripts allow-same-origin"></iframe>
-								</iframe>
-								</iframe>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U"></iframe>
+
 							</div>
 						</details>
 					</section>
@@ -687,10 +680,8 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/xbQomG2z7TvAhRnhY3Fk"
-									sandbox="allow-scripts allow-same-origin">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/xbQomG2z7TvAhRnhY3Fk">
 								</iframe>
-
 							</div>
 						</details>
 					</section>
@@ -700,7 +691,6 @@
 							Typography sets default styles for headings, paragraphs, semantic text, blockquote and lists
 							elements
 						</p>
-
 						<h3 class="component-title">Headings</h3>
 						<div class="row">
 							<div class="column">
@@ -730,21 +720,17 @@
 						<details class="code-dropdown">
 							<summary>Show sample code</summary>
 							<div class="iframe-container">
-								<iframe loading="lazy" src="https://carbon.now.sh/embed/nllZcWo2gHrCuMWsgBqD"
-									width='100%' height='100%'>
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/nllZcWo2gHrCuMWsgBqD">
 								</iframe>
-
 							</div>
 						</details>
 					</section>
-
 				</div>
 			</div>
 		</main>
 		<button onclick="scrollToTop()" id="to-top" class="button-pill to-top ">
 			<i class="fas fa-angle-double-up" aria-hidden="true"></i>
 		</button>
-		<!-- <footer class="footer">- by Rushab</footer> -->
 	</body>
 
 </html>

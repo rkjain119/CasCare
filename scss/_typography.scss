@@ -48,18 +48,9 @@ h5,
 h6 {
 	color: inherit;
 	font-weight: 500;
-	line-height: 1.2;
+	line-height: 1.6;
 	margin-bottom: .5em;
 	margin-top: 0;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-	font-weight: 500;
 }
 
 h1,
@@ -92,10 +83,11 @@ h6,
 	font-size: .8rem;
 }
 
+
 // Paragraphs
-p {
-	margin: 0 0 $line-height-base;
-}
+// p {
+// 	margin: 0 0 1.5rem;
+// }
 
 // Semantic text elements
 a,
@@ -110,9 +102,6 @@ abbr[title] {
 	text-decoration: none;
 }
 
-
-
-
 // Blockquote
 blockquote {
 	border-left: $border-solid-1;
@@ -125,8 +114,6 @@ blockquote {
 }
 
 // List
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
 dl,
 ol,
 ul {
