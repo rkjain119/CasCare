@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="apple-touch-icon" href="icon.png" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- <link rel="stylesheet" href="dist\css\cascare.min.css" /> -->
+		<link rel="stylesheet" href="doc/css/cascare.css" />
+		<script defer="" src="/doc/documentation.js"></script>
+		<title>CasCare UI</title>
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<ul class="navbar-ul">
+				<li class="logo">
+					<a href="#" class="logo-link">
+						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-down"
+							role="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+							class="svg-inline--fa fa-angle-double-down fa-w-10 fa-3x">
+							<g class="fa-group">
+								<path fill="currentColor"
+									d="M143 256L7.05 120.37a23.78 23.78 0 0 1 0-33.8L29.64 64a23.94 23.94 0 0 1 33.89 0l96.37 96.13L256.27 64a23.94 23.94 0 0 1 33.89 0L313 86.47a23.78 23.78 0 0 1 0 33.8L177 255.88a23.94 23.94 0 0 1-34 .1z"
+									class="fa-secondary"></path>
+								<path fill="currentColor"
+									d="M143 447.89L7.05 312.34a23.77 23.77 0 0 1 0-33.79L29.74 256a23.94 23.94 0 0 1 33.89 0L160 352.11l96.47-96a23.94 23.94 0 0 1 33.89 0L313 278.65a23.77 23.77 0 0 1 0 33.79L177 448a24 24 0 0 1-34-.11z"
+									class="fa-primary"></path>
+							</g>
+						</svg>
+						<span class="logo-text">CASCARE</span>
+					</a>
+					<span class="version">v0.0.1</span>
+				</li>
+
+				<li class="nav-item">
+					<a onclick="showSearch()" class="nav-link">
+						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="search" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+							class="svg-inline--fa fa-search fa-w-16 fa-lg">
+							<g class="fa-group">
+								<path fill="currentColor"
+									d="M208 80a128 128 0 1 1-90.51 37.49A127.15 127.15 0 0 1 208 80m0-80C93.12 0 0 93.12 0 208s93.12 208 208 208 208-93.12 208-208S322.88 0 208 0z"
+									class="fa-secondary"></path>
+								<path fill="currentColor"
+									d="M504.9 476.7L476.6 505a23.9 23.9 0 0 1-33.9 0L343 405.3a24 24 0 0 1-7-17V372l36-36h16.3a24 24 0 0 1 17 7l99.7 99.7a24.11 24.11 0 0 1-.1 34z"
+									class="fa-primary"></path>
+							</g>
+						</svg>
+						<span class="link-text">search</span>
+					</a>
+					<div id="search-box">
+						<div class="container">
+							<a class="close" id="close" onclick="hideSearch()"></a>
+							<div class="search-main">
+								<div class="search-inner">
+									<form id="docsearch">
+										<input id="docsearch-input" placeholder="Seach Docs..." type="search"
+											list="search" onkeyup="window.location='#' + this.value" />
+										<datalist id="search">
+											<option value="how-to"></option>
+											<option value="download"></option>
+											<option value="alert"></option>
+											<option value="avatar"></option>
+											<option value="badges"></option>
+											<option value="button"> </option>
+											<option value="cards"></option>
+											<option value="image"></option>
+											<option value="list"></option>
+											<!-- <option value="modal"></option>
+											<option value="nav"></option> -->
+											<option value="popover"></option>
+											<option value="toast"></option>
+											<option value="topography"></option>
+										</datalist>
+									</form>
+									<span class="search-info">Hit enter to search or ESC to close</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="scss\cascare.css" class="nav-link download">
+						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cloud-download"
+							role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+							class="svg-inline--fa fa-cloud-download fa-w-20 fa-3x">
+							<g class="fa-group">
+								<path fill="currentColor"
+									d="M537.6 226.6A96.11 96.11 0 0 0 448 96a95.51 95.51 0 0 0-53.3 16.2A160 160 0 0 0 96 192c0 2.7.1 5.4.2 8.1A144 144 0 0 0 144 480h368a128 128 0 0 0 25.6-253.4zm-139.9 93L305 412.3a23.9 23.9 0 0 1-33.9 0l-92.7-92.7a23.9 23.9 0 0 1 0-33.9l10.8-10.8a24.09 24.09 0 0 1 34.5.5l32.4 34.5V184a23.94 23.94 0 0 1 24-24h16a23.94 23.94 0 0 1 24 24v125.9l32.4-34.5a24 24 0 0 1 34.5-.5l10.8 10.8a24.18 24.18 0 0 1-.1 33.9z"
+									class="fa-secondary"></path>
+								<path fill="currentColor"
+									d="M397.7 319.6L305 412.3a23.9 23.9 0 0 1-33.9 0l-92.7-92.7a23.9 23.9 0 0 1 0-33.9l10.8-10.8a24.09 24.09 0 0 1 34.5.5l32.4 34.5V184a23.94 23.94 0 0 1 24-24h16a23.94 23.94 0 0 1 24 24v125.9l32.4-34.5a24 24 0 0 1 34.5-.5l10.8 10.8a24.18 24.18 0 0 1-.1 33.9z"
+									class="fa-primary"></path>
+							</g>
+						</svg>
+
+						<span class="link-text">Download</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#docs" class="nav-link">
+						<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="folder-open" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+							class="svg-inline--fa fa-folder-open fa-w-18 fa-3x">
+							<g class="fa-group">
+								<path fill="currentColor"
+									d="M69.08 271.63L0 390.05V112a48 48 0 0 1 48-48h160l64 64h160a48 48 0 0 1 48 48v48H152a96.31 96.31 0 0 0-82.92 47.63z"
+									class="fa-secondary"></path>
+								<path fill="currentColor"
+									d="M152 256h400a24 24 0 0 1 20.73 36.09l-72.46 124.16A64 64 0 0 1 445 448H45a24 24 0 0 1-20.73-36.09l72.45-124.16A64 64 0 0 1 152 256z"
+									class="fa-primary"></path>
+							</g>
+						</svg>
+						<span class="link-text">Docs</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<div class="nav-link social-link">
+						<a href="https://github.com/rkjain119">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+								class="svg-inline--fa fa-github fa-w-16 fa-3x">
+								<path fill="currentColor"
+									d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+									class="fa-primary"></path>
+							</svg></a>
+						<a href="https://twitter.com/rkjain119">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+								class="svg-inline--fa fa-twitter fa-w-16 fa-3x">
+								<path fill="currentColor"
+									d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+									class="fa-primary"></path>
+							</svg></a>
+						<a href="https://rushab.in">
+							<svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="paper-plane"
+								role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+								class="svg-inline--fa fa-paper-plane fa-w-16 fa-3x">
+								<g class="fa-group">
+									<path fill="currentColor"
+										d="M245.53 410.5l-75 92.83c-14 17.1-42.5 7.8-42.5-15.8V358l280.26-252.77c5.5-4.9 13.3 2.6 8.6 8.3L191.72 387.87z"
+										class="fa-secondary"></path>
+									<path fill="currentColor"
+										d="M511.59 28l-72 432a24.07 24.07 0 0 1-33 18.2l-214.87-90.33 225.17-274.34c4.7-5.7-3.1-13.2-8.6-8.3L128 358 14.69 313.83a24 24 0 0 1-2.2-43.2L476 3.23c17.29-10 39 4.6 35.59 24.77z"
+										class="fa-primary"></path>
+								</g>
+							</svg></a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<header class="hero">
+				<h1 class="hero-title">CasCare</h1>
+				<h3>Build and ship 🔥 your app ⚡ faster🚀</h3>
+				<p>
+					CSS framework and component library for programmers and rapid
+					prototypers
+				</p>
+				<div class="hero-buttons">
+					<button class="button">Explore</button>
+					<button class="button button-outline">Download</button>
+					<hr />
+					<button class="button button-clear">show me the code</button>
+				</div>
+			</header>
+			<div id="docs" class="docs">
+				<aside class="sidebar">
+					<h4 class="sidebar-title">Components</h4>
+					<div class="sidebar-links">
+						<div class="sidebar-nav-link">
+							<a href="#how-to" class="sidebar-link button button-clear">How-To</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#download" class="sidebar-link button button-clear">Download</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#alert" class="sidebar-link button button-clear">Alert</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#avatar" class="sidebar-link button button-clear">Avatar</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#badges" class="sidebar-link button button-clear">Badge</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#button" class="sidebar-link button button-clear">Button</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#cards" class="sidebar-link button button-clear">Card</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#image" class="sidebar-link button button-clear">Image</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#list" class="sidebar-link button button-clear">Lists</a>
+						</div>
+						<!-- <div class="sidebar-nav-link">
+							<a href="#modal" class="sidebar-link button button-clear">Modal</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#nav" class="sidebar-link button button-clear">Navigation</a>
+						</div> -->
+						<div class="sidebar-nav-link">
+							<a href="#popover" class="sidebar-link button button-clear">Popover</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#toast" class="sidebar-link button button-clear">Toast</a>
+						</div>
+						<div class="sidebar-nav-link">
+							<a href="#topography" class="sidebar-link button button-clear">Typography</a>
+						</div>
+					</div>
+				</aside>
+				<div class="docs-content">
+					<section id="how-to" class="component">
+						<h3 class="component-title title-how-to">CasCare</h3>
+						<p class="component-description">
+							CasCare is a light-weight and responsive open source CSS library.
+						</p>
+						<p>
+							There are 2 ways to get started with CasCare library in your projects. You can either
+							install manually, or from CDN.
+						</p>
+						<h3 class="component-title ">Install manually</h3>
+						<p>
+							Include <code>drift.css</code> in your website or Web app.
+						</p>
+						<iframe src="https://carbon.now.sh/embed/s35sMW1Lv0YcmUnmGqp3"
+							style="width: 452px; height: 119px; border:0; transform: scale(1); overflow:hidden;"
+							sandbox="allow-scripts allow-same-origin">
+						</iframe>
+						<p>Download the compiled and minified <code> CasCare.min.css </code>file
+						</p>
+						<button id="download" class="button">Download</button>
+
+						<h3 class="component-title ">Install via CDN</h3>
+						<details class="code-dropdown">
+							<summary>Use the following CDN link to include driftcss in your project.
+							</summary>
+							<iframe src="https://carbon.now.sh/embed/s35sMW1Lv0YcmUnmGqp3"
+								style="width: 452px; height: 119px; border:0; transform: scale(1); overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+							</iframe>
+						</details>
+
+
+
+					</section>
+					<section id="alert" class="component">
+						<h3 class="component-title">Alert</h3>
+						<p class="component-description">
+							Provide contextual feedback messages for typical user actions with
+							the handful of available and flexible alert messages
+						</p>
+						<div class="alert alert-success">
+							Success!Your registration is now complete!
+						</div>
+						<div class="alert alert-error">
+							An error occurred while attempting to register your account...
+						</div>
+						<div class="alert alert-info">
+							Here's some information you may find useful!
+						</div>
+						<div class="alert alert-warn">
+							Warning! We're currently carrying out maintenance, some features
+							may not work correctly.
+						</div>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/d5C31jXaS6on8PUAnAnS"
+									sandbox="allow-scripts allow-same-origin">
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="avatar" class="component">
+						<h3 class="component-title">Avatar</h3>
+						<p class="component-description">
+							Avatars are user profile pictures.
+						</p>
+						<div class="flex">
+							<div class="flex row">
+								<figure class="avatar avatar-xl margin-1">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar XL" />
+								</figure>
+								<figure class="avatar avatar-lg margin-1">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar LG" />
+								</figure>
+								<figure class="avatar margin-1">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar" />
+								</figure>
+								<figure class="avatar avatar-sm margin-1">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar SM" />
+								</figure>
+							</div>
+							<div class="flex row">
+								<figure class="avatar avatar-xl margin-1" data-initial="RK"></figure>
+								<figure class="avatar avatar-lg margin-1" data-initial="RK"></figure>
+								<figure class="avatar margin-1" data-initial="RK"></figure>
+								<figure class="avatar avatar-sm margin-1" data-initial="RK"></figure>
+							</div>
+						</div>
+						<p>
+							Add the <code>avatar</code> class to &lt;img&gt; element. There
+							are 4 additional sizes available, including
+							<code>avatar-xl</code>, <code>avatar-lg</code>,
+							<code>avatar-sm</code>, and <code>avatar-xs</code>.
+						</p>
+						<p>
+							For users who don't have profile pictures, you may use their
+							initials for avatars. Add the <code>avatar</code> class and avatar
+							size class to <code>&lt;div&gt;</code> element. The
+							<code>data-initial</code> attribute is the name appear inside the
+							avatar.
+						</p>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/uebcH0gJ1icPjpfKAQJK"
+									sandbox="allow-scripts allow-same-origin">
+								</iframe>
+							</div>
+						</details>
+						<div class="flex">
+							<div class="">
+								<figure class="avatar avatar-xl margin-1">
+									<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" /><img
+										class="avatar-icon"
+										src="https://pbs.twimg.com/profile_images/1346736701129912321/NPXBzl9s_400x400.jpg"
+										alt="Avatar" />
+								</figure>
+								<figure class="avatar avatar-lg margin-1">
+									<img src="https://pbs.twimg.com/profile_images/1346736701129912321/NPXBzl9s_400x400.jpg"
+										alt="Avatar" /><img class="avatar-icon"
+										src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
+								</figure>
+								<figure class="avatar margin-1">
+									<img src="https://thumbs.dreamstime.com/z/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg"
+										alt="Avatar" /><img class="avatar-icon"
+										src="https://pbs.twimg.com/profile_images/1346736701129912321/NPXBzl9s_400x400.jpg"
+										alt="Avatar" />
+								</figure>
+								<figure class="avatar avatar-sm margin-1">
+									<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" /><img
+										class="avatar-icon"
+										src="https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg"
+										alt="Avatar" />
+								</figure>
+							</div>
+
+							<div class="">
+								<figure class="avatar avatar-xl margin-1" data-initial="RK">
+									<i class="avatar-status online"></i>
+								</figure>
+								<figure class="avatar avatar-lg margin-1" data-initial="RK">
+									<i class="avatar-status busy"></i>
+								</figure>
+								<figure class="avatar margin-1" data-initial="RK">
+									<i class="avatar-status idle"></i>
+								</figure>
+								<figure class="avatar avatar-sm margin-1" data-initial="RK">
+									<i class="avatar-status offline"></i>
+								</figure>
+							</div>
+						</div>
+						<p>
+							Avatars support icons and status indicators. You can add an
+							<code> &lt;i&gt; </code>element with the<code>
+								.avatar-status
+							</code>
+							class, and add <code>.online</code>, <code>.busy</code> or<code>.idle</code>
+							class for different status colors. The default is gray which means
+							offline.
+						</p>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2"
+									sandbox="allow-scripts allow-same-origin">
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="badges" class="component">
+						<h3 class="component-title">Badges</h3>
+						<p class="component-description">
+							Badges are often used as unread number notification.
+						</p>
+						<div class="flex">
+							<div class="row">
+								<span class="badge margin-1" data-badge="">Notifications</span>
+								<span class="badge margin-1" data-badge="1">Notifications</span>
+								<span class="badge margin-1" data-badge="12">Notifications</span>
+								<span class="badge margin-1" data-badge="123">Notifications</span>
+							</div>
+							<div class="row">
+								<figure class="avatar badge avatar-xl margin-1" data-badge="999" data-initial="RK">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar XL" />
+								</figure>
+								<figure class="avatar badge avatar-lg margin-1" data-badge="123" data-initial="RK">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar LG" />
+								</figure>
+								<figure class="avatar badge margin-1" data-badge="99" data-initial="RK">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar" />
+								</figure>
+								<figure class="avatar badge avatar-sm margin-1" data-badge="12" data-initial="RK">
+									<img src="https://res.cloudinary.com/dyl08vtii/image/upload/v1628593444/V4bunpAi_400x400_a0y3rp.jpg"
+										alt="Avatar SM" />
+								</figure>
+							</div>
+						</div>
+						<p>Badges support avatars elements as well.</p>
+						<p>
+							Add class <code>.badge</code>and attribute<code>data-badge = ""
+							</code>
+							to add badges to any element.
+						</p>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/BQAXWFPzi78HzFGJnNux"
+									sandbox="allow-scripts allow-same-origin">
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="button" class="component">
+						<h3 class="component-title">Buttons</h3>
+						<p class="component-description">
+							The Button, an essential part of any user experience. Buttons come
+							in three basic styles in CasCare: The button element has flat
+							color by default, whereas <code>.button-outline</code> has a
+							simple outline around,and <code>.button-pill</code> is pill shaped
+							button, and <code>.button-clear</code> is entirely clear, to
+							disable any button simply add <code>disabled</code> tag after the
+							class name as shown in the snipet bellow
+						</p>
+						<!-- Default Button -->
+						<div class="flex gap-10">
+							<button class="button">Default Button</button>
+							<!-- Outlined Button -->
+							<button class="button button-outline">Outlined Button</button>
+							<!-- Pill Button -->
+							<button class="button button-pill">Pill Button</button>
+							<!-- Pill Button disablec -->
+							<button class="button button-pill" disabled>Pill Button</button>
+							<!-- Clear Button -->
+							<input class="button button-clear" type="submit" value="Clear Button" />
+						</div>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/xUKugrjmblJOjqmjG38C"
+									sandbox="allow-scripts allow-same-origin"></iframe>
+							</div>
+						</details>
+					</section>
+					<section id="cards" class="component">
+						<h3 class="component-title">Card</h3>
+						<p class="component-description">
+							Cards are flexible content containers.
+							Add a container element with the card class. And add child elements with the
+							<code>card-image</code>,
+							<code>card-header</code>, <code>card-body</code> and/or
+							<code>card-footer</code> classes. The card-image can be placed in any position.
+						</p>
+						<div class="card-wrapper">
+							<div class="card">
+								<div class="card-header h4">
+									<div class="card-title h4">Apple</div>
+									<div class="card-subtitle text-gray">Hardware and software</div>
+								</div>
+								<div class="card-body">To make a contribution to the world by making tools for the mind
+									that
+									advance humankind.
+								</div>
+								<div class="card-image"><img class="img-responsive"
+										src="https://wallpaperaccess.com/thumb/366398.jpg" alt="macOS Sierra"></div>
+							</div>
+							<div class="card">
+								<div class="card-header h4">
+									<div class="card-title h4">Apple</div>
+									<div class="card-subtitle text-gray">Hardware and software</div>
+								</div>
+								<div class="card-image"><img class="img-responsive"
+										src="https://wallpaperaccess.com/thumb/366398.jpg" alt="macOS Sierra"></div>
+								<div class="card-body">To make a contribution to the world by making tools for the mind
+									that
+									advance humankind.
+								</div>
+								<div class="card-footer">
+									<div class="flex gap-10">
+										<button class="button">Buy</button>
+										<button class="button button-outline">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe src="https://carbon.now.sh/embed/mx0PLb09PwBcYv1lpSQ2"
+									sandbox="allow-scripts allow-same-origin"></iframe>
+							</div>
+						</details>
+					</section>
+					<section id="image" class="component">
+						<h3 class="component-title">Image</h3>
+						<p class="component-description">
+							Images can be made responsive using the <code>.img-responsive</code> class,
+						</p>
+						<div class="images-responsive">
+							<img loading="lazy" class="img-responsive"
+								src="https://res.cloudinary.com/duhbhavesh/image/upload/v1615908702/driftcss/static/card-1.jpg"
+								alt="Mountain Image">
+						</div>
+						<p class="component-description">
+							and rounded using the <code>.img-rounded</code> class <code>.img-thumbnail</code> for
+							thumbnails.
+						</p>
+						<div class="images-round-thumbnail gap-10">
+							<img loading="lazy" class="img-responsive img-rounded"
+								src="https://wallpaperaccess.com/thumb/366398.jpg" alt="Mountain Image">
+							<img loading="lazy" class="img-responsive img-thumbnail"
+								src="https://wallpaperaccess.com/thumb/366398.jpg" alt="Mountain Image">
+						</div>
+
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U"
+									sandbox="allow-scripts allow-same-origin"></iframe>
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="list" class="component">
+						<h3 class="component-title">Lists</h3>
+						<p class="component-description">
+							The List is a very versatile and common way to display items.
+						</p>
+						<div class="example">
+							<div class="row ">
+								<div class="column margin-right-1">
+									<ul>
+										<li>Unordered list item 1</li>
+										<li>Unordered list item 2</li>
+									</ul>
+								</div>
+								<div class="column margin-right-1">
+									<ol>
+										<li>Ordered list item 1</li>
+										<li>Ordered list item 2</li>
+									</ol>
+								</div>
+								<div class="column margin-right-1">
+									<dl>
+										<dt>Description list item 1</dt>
+										<dd>Description list item 1.1</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe src="https://carbon.now.sh/embed/s5gRMDdB20hFWqmtUzIl"
+									sandbox="allow-scripts allow-same-origin"></iframe>
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="popover" class="component">
+						<h3 class="component-title">Popover</h3>
+						<p class="component-description">
+							Popovers are small overlay content containers.
+						</p>
+						<div class="popover"><button class="button button-clear" href="#popover">top popover</button>
+							<div class="popover-container">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title h5">Apple</div>
+										<div class="card-subtitle text-gray">Software and hardware</div>
+									</div>
+									<div class="card-body">To make a contribution to the world by making tools for
+										the
+										mind that advance
+										humankind.</div>
+									<div class="card-footer">
+										<button class="button">Buy</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="component-description">
+							Wrap an element by a container with the <code>.popover</code> class. And add a container
+							with the
+							.popover-container inside to the element. You can also use <code>.card</code> Card component
+							inside the
+							popover-container.
+						</p>
+
+						<div class="popover popover-right"><button class="button" href="#popovers">right
+								popover</button>
+							<div class="popover-container">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title h5">Apple</div>
+										<div class="card-subtitle text-gray">Software and hardware</div>
+									</div>
+									<div class="card-body">To make a contribution to the world by making tools for the
+										mind that advance
+										humankind.</div>
+									<div class="card-footer">
+										<button class="button">Buy</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="component-description">
+
+							You can add the <code>.popover-right</code>, <code>.popover-bottom</code> or
+							<code>.popover-left</code> class to define the
+							position. By default, the
+							popovers appear above the element.
+						</p>
+
+
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe src="https://carbon.now.sh/embed/gBx185h85XEZvnwBzF2U"
+									sandbox="allow-scripts allow-same-origin"></iframe>
+								</iframe>
+								</iframe>
+							</div>
+						</details>
+					</section>
+					<section id="toast" class="component">
+						<h3 class="component-title">Toast</h3>
+						<p class="component-description">
+							Toasts provide brief messages about app processes. The component is also known as a
+							Snackbar.
+						</p>
+						<button onclick="openToast()" class="button button-clear" type="button"
+							id="toast-demo-open">Open Success
+							Toast</button>
+
+						<div class="toast toast-success">
+							Success!Your registration is now complete!
+						</div>
+						<div class="toast toast-error">
+							An error occurred while attempting to register your account please try agin later.
+						</div>
+						<div class="toast toast-info">
+							Here's some information you may find useful!
+						</div>
+						<div class="toast toast-warn">
+							Warning! We're currently carrying out maintenance, some features
+							may not work correctly.
+						</div>
+						<div id="toast-demo" class="toast toast-success">
+							Success!Your registration is now complete!
+						</div>
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/xbQomG2z7TvAhRnhY3Fk"
+									sandbox="allow-scripts allow-same-origin">
+								</iframe>
+
+							</div>
+						</details>
+					</section>
+					<section id="topography" class="component">
+						<h3 class="component-title">Topography</h3>
+						<p class="component-description">
+							Typography sets default styles for headings, paragraphs, semantic text, blockquote and lists
+							elements
+						</p>
+
+						<h3 class="component-title">Headings</h3>
+						<div class="row">
+							<div class="column">
+								<h1>Heading<span class="heading-font-size"> <code>h1</code> 4.6rem (46px)</span>
+								</h1>
+								<h2>Heading<span class="heading-font-size"> <code>h2</code> 3.6rem (36px)</span>
+								</h2>
+								<h3>Heading<span class="heading-font-size"> <code>h3</code> 2.8rem (28px)</span>
+								</h3>
+								<h4>Heading<span class="heading-font-size"> <code>h4</code> 2.2rem (22px)</span>
+								</h4>
+								<h5>Heading<span class="heading-font-size"> <code>h5</code> 1.8rem (18px)</span>
+								</h5>
+								<h6>Heading<span class="heading-font-size"> <code>h6</code> 1.6rem (16px)</span>
+								</h6>
+							</div>
+						</div>
+						<h3 class="component-title">Blockquotes
+						</h3>
+						<p class="component-description">The Blockquote represents a section that is quoted from another
+							source.</p>
+						<blockquote>
+							<p><em>Very fancy quote </em></p>
+							<cite>- Me</cite>
+						</blockquote>
+
+						<details class="code-dropdown">
+							<summary>Show sample code</summary>
+							<div class="iframe-container">
+								<iframe loading="lazy" src="https://carbon.now.sh/embed/nllZcWo2gHrCuMWsgBqD"
+									width='100%' height='100%'>
+								</iframe>
+
+							</div>
+						</details>
+					</section>
+
+				</div>
+			</div>
+		</main>
+		<button onclick="scrollToTop()" id="to-top" class="button-pill to-top ">
+			<i class="fas fa-angle-double-up" aria-hidden="true"></i>
+		</button>
+		<!-- <footer class="footer">- by Rushab</footer> -->
+	</body>
+
+</html>

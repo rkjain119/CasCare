@@ -1,0 +1,27 @@
+.img-responsive {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.images-round-thumbnail {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.img-rounded {
+	clip-path: circle();
+}
+
+.img-thumbnail {
+	border-radius: $border-radius-0;
+	border: none;
+}
+
+@media (min-width: $size-sm) {
+	.images-round-thumbnail {
+		flex-direction: row;
+		width: 50%;
+	}
+}

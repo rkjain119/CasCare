@@ -1,0 +1,85 @@
+.avatar {
+	font-size: 1.2rem;
+	height: 2.4rem;
+	width: 2.4rem;
+	background: $color-primary;
+	border-radius: 50%;
+	color: $color-tertiary;
+	display: inline-block;
+	font-weight: $font-weigth-4;
+	line-height: 1.8;
+	// margin: 0;
+	position: relative;
+	vertical-align: middle;
+
+	&.avatar-xs {
+		font-size: 0.6rem;
+		height: 1.2rem;
+		width: 1.2rem;
+	}
+	&.avatar-sm {
+		font-size: 1rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&.avatar-lg {
+		font-size: 1.6rem;
+		height: 3.2rem;
+		width: 3.2rem;
+	}
+	&.avatar-xl {
+		font-size: 1.8rem;
+		height: 3.6rem;
+		width: 3.6rem;
+	}
+	img {
+		border-radius: 50%;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		z-index: $zindex-0;
+	}
+
+	.avatar-icon,
+	.avatar-status {
+		background: $color-secondary;
+		bottom: 14.64%;
+		height: 50%;
+		// padding: $border-width-1;
+		position: absolute;
+		right: 14.64%;
+		transform: translate(50%, 50%);
+		width: 50%;
+		z-index: $zindex-1;
+	}
+
+	.avatar-status {
+		background: gray;
+		// box-shadow: 0 0 0 $border-width-lg $light-color;
+		border-radius: 50%;
+		height: 0.5em;
+		width: 0.5em;
+
+		&.online {
+			background: $success-color;
+		}
+
+		&.busy {
+			background: $error-color;
+		}
+
+		&.idle {
+			background: $warning-color;
+		}
+	}
+
+	&[data-initial]::before {
+		color: currentColor;
+		content: attr(data-initial);
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: $zindex-0;
+	}
+}

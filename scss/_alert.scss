@@ -1,0 +1,72 @@
+@import url("https: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css");
+
+.alert {
+	margin: 10px 0px;
+	padding: 12px;
+	border-radius: $border-radius-1;
+	font-size: $font-size-1;
+}
+
+.alert:hover {
+	cursor: pointer;
+}
+
+.alert:before {
+	padding-right: 12px;
+}
+
+// .alert:after {
+// 	content: "\f00d";
+// 	font-family: "FontAwesome";
+// 	float: right;
+// 	padding: 3px;
+// 	&:hover {
+// 		cursor: pointer;
+// 	}
+// }
+
+.alert-info {
+	color: #00529b;
+	background-color: #bde5f8;
+	border: 1px solid darken(#bde5f8, 15%);
+}
+
+.alert-info:before {
+font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f05a";
+	
+}
+
+.alert-warn {
+	color: #9f6000;
+	background-color: #feefb3;
+	border: 1px solid darken(#feefb3, 15%);
+}
+
+.alert-warn:before {
+	content: "\f071";
+	font-family: "FontAwesome";
+}
+
+.alert-error {
+	color: #d8000c;
+	background-color: #ffbaba;
+	border: 1px solid darken(#ffbaba, 15%);
+}
+
+.alert-error:before {
+	content: "\f057";
+	font-family: "FontAwesome";
+}
+
+.alert-success {
+	color: #4f8a10;
+	background-color: #dff2bf;
+	border: 1px solid darken(#dff2bf, 15%);
+}
+
+.alert-success:before {
+	content: "\f058";
+	font-family: "FontAwesome";
+}

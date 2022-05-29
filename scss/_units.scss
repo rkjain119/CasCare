@@ -1,0 +1,102 @@
+$nav-min: 5rem;
+$nav-max: 16rem;
+
+$zindex-0: 0;
+$zindex-1: $zindex-0 + 1;
+$zindex-popover: 999;
+
+$font-size-0: 0.875rem !important;
+$font-size-1: 1rem !important;
+$font-size-2: 1.25rem !important;
+$font-size-3: 1.5rem !important;
+$font-size-4: 1.6rem !important;
+$font-size-5: 2rem !important;
+$font-size-6: 2.5rem !important;
+$font-size-7: 3rem !important;
+$font-size-8: 3.5rem !important;
+$font-size-9: 4rem !important;
+$font-size-10: 4.5rem !important;
+$font-size-11: 5rem !important;
+
+
+$font-weigth-1: 100;
+$font-weigth-2: 200;
+$font-weigth-3: 300;
+$font-weigth-4: 400;
+$font-weigth-5: 500;
+$font-weigth-6: 600;
+$font-weigth-7: 700;
+
+$border-radius-0: 0.25rem;
+$border-radius-1: 0.3rem;
+$border-radius-2: 0.5rem;
+$border-radius-3: 50rem;
+
+$border-width-0: 0px;
+$border-width-1: 1px;
+$border-width-2: 2px;
+$border-width-3: 3px;
+$border-width-4: 4px;
+$border-width-5: 5px;
+
+$space-0: 0rem;
+$space-1: 0.1rem;
+$space-2: 0.2rem;
+$space-3: 0.4rem;
+$space-4: 0.8rem;
+$space-5: 1.1rem;
+$space-6: 1.5rem;
+
+$line-height-sm: 1;
+$line-height-med: 1.25;
+$line-height-base: 1.5;
+$line-height-lg: 1.8;
+
+$border-solid-3: 1px solid $blue-0;
+$border-solid-2: 1px solid #dbdbdb;
+$border-solid-1: 1px solid;
+$border-style-0: none;
+
+$transition-speed-1: 100ms;
+$transition-speed-2: 200ms;
+$transition-speed-3: 300ms;
+$transition-speed-4: 400ms;
+$transition-speed-5: 500ms;
+$transition-speed-6: 600ms;
+$transition-speed-7: 700ms;
+
+// Responsive breakpoints
+$size-sm: 599px !default;
+$size-md: 768px !default;
+$size-lg: 992px !default;
+$size-xl: 1280px !default;
+
+$box-shadow-0dp: none;
+$box-shadow-1dp: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+	0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+$box-shadow-2dp: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+	0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+$box-shadow-3dp: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+	0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+$box-shadow-4dp: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+	0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+$box-shadow-6dp: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+	0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+$box-shadow-8dp: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+	0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+$box-shadow-9dp: 0 9px 12px 1px rgba(0, 0, 0, 0.14),
+	0 3px 16px 2px rgba(0, 0, 0, 0.12), 0 5px 6px -3px rgba(0, 0, 0, 0.2);
+$box-shadow-12dp: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+	0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+$box-shadow-16dp: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+	0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+$box-shadow-24dp: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+	0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+
+// $box-shadow-0: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+// $box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+// $box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+$box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+$box-shadow-btn: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+	0 1px 1px rgba(0, 0, 0, 0.075) !default;
+$box-shadow-btn-active: inset 0 3px 5px rgba(0, 0, 0, 0.125);

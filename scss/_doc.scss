@@ -1,0 +1,227 @@
+.docs {
+	display: flex;
+	flex-direction: column;
+	font-size: $font-size-1;
+}
+.hero-title {
+	font-weight: bold;
+	font-size: $font-size-11;
+	background: linear-gradient(to right, $blue-3 10%, $blue-7 99%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.title-how-to {
+	font-weight: bold;
+	font-size: $font-size-8;
+	color: $color-primary;
+}
+.component {
+	border: $border-solid-2;
+	border-radius: $border-radius-2;
+	display: flex;
+	flex-direction: column;
+	margin-top: 4rem;
+	padding: 1rem;
+
+	&-title {
+		font-size: $font-size-2;
+		margin: 0.5rem;
+		margin-left: 0;
+	}
+	&-description {
+		font-size: $font-size-1;
+		margin-bottom: 2rem;
+	}
+}
+
+.sidebar {
+	margin: 0 auto;
+	width: 90%;
+	justify-content: center;
+}
+.sidebar-title {
+	font-size: $font-size-3;
+	margin: 0.9rem 0 1rem 0.6rem;
+	text-align: center;
+}
+
+.sidebar-links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: center;
+	text-align: center;
+}
+.sidebar-nav-link {
+	width: 36%;
+	display: block;
+	padding: 0.5rem;
+	// border: $border-solid-2;
+	border-radius: $border-radius-2;
+}
+.sidebar-link {
+	height: 0;
+	font-weight: $font-weigth-4;
+	line-height: $line-height-base;
+}
+
+@media screen and (min-width: $size-md) {
+	.docs {
+		flex-direction: row;
+	}
+	.sidebar {
+		width: 20%;
+		height: 80vh;
+		margin: 0;
+		position: sticky;
+		top: 9%;
+	}
+	.sidebar-title {
+		text-align: left;
+	}
+	.sidebar-links {
+		flex-direction: column;
+		flex-wrap: wrap;
+		text-align: left;
+	}
+	.sidebar-nav-link {
+		width: 90%;
+	}
+	.docs-content {
+		width: 60%;
+	}
+}
+
+.code-dropdown {
+	margin-top: 1rem;
+	border: $border-solid-3;
+	border-radius: $border-radius-2;
+}
+details {
+	transition: 0.15s background linear;
+	&:hover {
+		background: $blue-0;
+	}
+}
+details summary {
+	cursor: pointer;
+}
+summary {
+	padding: 0.7rem;
+}
+
+details[open] {
+	animation: animateDown 0.2s linear forwards;
+}
+
+@keyframes animateDown {
+	0% {
+		opacity: 0;
+		transform: translatey(-15px);
+	}
+	100% {
+		opacity: 1;
+		transform: translatey(0);
+	}
+}
+
+.iframe-container {
+	width: 100%;
+	margin: 1rem;
+	text-align: center;
+	overflow: hidden;
+	height: 100% !important;
+}
+iframe {
+	width: 100% !important;
+	border: none;
+	transform: scale(1);
+	overflow: hidden;
+}
+
+//utilities?
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.gap-10 {
+	gap: 10px;
+}
+.column {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.margin-1 {
+	margin: 0.8rem;
+}
+
+.margin-right-1 {
+	margin-right: 4rem;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-direction: row;
+	margin: 1rem;
+	gap: 1rem;
+	&:hover {
+		background: $color-secondary;
+	}
+}
+.card {
+	width: 50%;
+}
+
+// toast
+
+#toast-demo {
+	margin-bottom: $space-1;
+}
+
+#toast-demo {
+	display: none;
+	position: fixed;
+	bottom: $space-4;
+	align-items: center;
+	justify-content: center;
+}
+
+#toast-demo.open {
+	display: flex;
+}
+
+@media (min-width: $size-sm) {
+	#toast-demo {
+		width: auto;
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+	}
+}
+
+// hide scroll to top button in small screens
+@media (max-width: $size-sm) {
+	#to-top {
+		display: none !important;
+	}
+}
+
+.to-top {
+	position: fixed;
+	z-index: 1000;
+	right: 1rem;
+	bottom: 1.6rem;
+	cursor: pointer;
+}
+// .to-top::before{
+// 	content:"\f077";
+// 		font-family: "FontAwesome";
+// }

@@ -1,0 +1,72 @@
+.toast {
+    margin: 10px 0px;
+    padding: 12px;
+    border-radius: $border-radius-1;
+    font-size: $font-size-1;
+    min-width: min-content;
+}
+
+.toast:hover {
+    cursor: pointer;
+}
+
+.toast:before {
+    padding-right: 12px;
+}
+
+.toast:after {
+    content: "\f00d";
+    font-family: "FontAwesome";
+    float: right;
+    padding: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.toast-info {
+    color: #00529b;
+    background-color: #bde5f8;
+    border: 1px solid darken(#bde5f8, 15%);
+}
+
+.toast-info:before {
+    content: "\f05a";
+    font-family: "FontAwesome";
+}
+
+.toast-warn {
+    color: #9f6000;
+    background-color: #feefb3;
+    border: 1px solid darken(#feefb3, 15%);
+}
+
+.toast-warn:before {
+    content: "\f071";
+    font-family: "FontAwesome";
+}
+
+.toast-error {
+    color: #d8000c;
+    background-color: #ffbaba;
+    border: 1px solid darken(#ffbaba, 15%);
+}
+
+.toast-error:before {
+    content: "\f057";
+    font-family: "FontAwesome";
+}
+
+.toast-success {
+    color: #4f8a10;
+    background-color: #dff2bf;
+    border: 1px solid darken(#dff2bf, 15%);
+}
+
+.toast-success:before {
+    content: "\f058";
+    font-family: "FontAwesome";
+}
+
+

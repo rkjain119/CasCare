@@ -1,0 +1,91 @@
+// Button
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+	background-color: $color-primary;
+	border: $border-solid-1 $color-primary;
+	border-radius: $border-radius-1;
+	color: $blue-0;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $font-size-1;
+	font-weight: $font-weigth-6;
+	height: 3rem;
+	letter-spacing: $space-1;
+	line-height: $line-height-sm;
+	padding: 0 1rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	max-width: max-content;
+
+	&:focus,
+	&:hover {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		color: $blue-0;
+		outline: 0;
+	}
+
+	&[disabled] {
+		cursor: default;
+		opacity: 0.5;
+
+		&:focus,
+		&:hover {
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+	}
+	&.button-pill {
+		border-radius: $border-radius-3;
+	}
+
+	&.button-outline {
+		background-color: transparent;
+		color: $color-primary;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: $color-secondary;
+			color: $color-secondary;
+		}
+
+		&[disabled] {
+			&:focus,
+			&:hover {
+				border-color: inherit;
+				color: $color-primary;
+			}
+		}
+	}
+
+	&.button-clear {
+		background-color: transparent;
+		border-color: transparent;
+		color: $color-primary;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: transparent;
+			color: $color-secondary;
+		}
+
+		&[disabled] {
+			&:focus,
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}

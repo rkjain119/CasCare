@@ -1,0 +1,25 @@
+//mobile
+@media only screen and (max-width: $size-md) {
+	main {
+		margin: 1rem;
+		padding: 1rem;
+		margin-bottom: 6rem;
+	}
+	.hero {
+		hr {
+			display: none;
+		}
+	}
+}
+//
+.hero {
+	min-height: 59vh;
+	max-width: 600px;
+	margin: 15% auto;
+	text-align: center;
+}
+hr {
+	border-width: 0;
+	color: gray;
+	background-color: gray;
+}
